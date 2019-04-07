@@ -1,0 +1,18 @@
+{
+    "name": "bghanem/generate-form-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fatmabengh",
+            "email": "fatmabenghanem08@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bg\\GenerateFormBundle\\": "src/"
+        }
+    }
+}
