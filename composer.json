@@ -1,6 +1,7 @@
 {
     "name": "bghanem/generate-form-bundle",
     "license": "MIT",
+    "type": "symfony-bundle",
     "authors": [
         {
             "name": "fatmabengh",
