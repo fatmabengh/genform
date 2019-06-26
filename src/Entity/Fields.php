@@ -50,12 +50,8 @@ class Fields
     private $items;
 
     /**
-     * @var \Form
-     *
-     * @ORM\ManyToOne(targetEntity="Form")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="form_id", referencedColumnName="id")
-     * })
+     * @ORM\ManyToOne(targetEntity="App\Entity\Form", inversedBy="$fields", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false,name="form_id")
      */
     private $form;
 
@@ -152,18 +148,12 @@ class Fields
         $this->items = $items;
     }
 
-    /**
-     * @return \Form
-     */
-    public function getForm(): \Form
+    public function getForm(): ?Form
     {
         return $this->form;
     }
 
-    /**
-     * @param \Form $form
-     */
-    public function setForm(\Form $form): void
+    public function setForm(?Form $form): void
     {
         $this->form = $form;
     }

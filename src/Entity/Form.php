@@ -43,6 +43,28 @@ class Form
     private $fields;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Response", mappedBy="form")
+     */
+    private $response;
+
+    /**
+     * @return mixed
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+    /**
+     * @param mixed $response
+     */
+    public function setResponse($response): void
+    {
+        $this->response = $response;
+    }
+
+
+    /**
      * Form constructor.
      */
     public function __construct($title,$description, $dateModif)
